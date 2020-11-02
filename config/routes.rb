@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   namespace :api do
     get "/photos" => "photos#index"
     #get "/routes" => "methods#controllermethod"
+    #get "/routes1" => "methods#controllermethod1"
   end
 end

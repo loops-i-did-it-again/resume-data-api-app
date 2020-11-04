@@ -5,5 +5,5 @@
   degree: education.degree,
   university: education.university,
   details: education.details,
-  student_id: education.student_id
+  student_id: education.student.id
 }

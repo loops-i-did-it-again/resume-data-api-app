@@ -10,5 +10,5 @@
   personal_url: student.personal_url,
   resume_url: student.resume_url,
   github_url: student.github_url,
-  photo_url: student.personal_url
+  photo_url: student.photo_url,
 }

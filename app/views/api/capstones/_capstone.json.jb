@@ -4,5 +4,4 @@
   description: capstone.description,
   capstone_url: capstone.capstone_url,
   screenshot_url: capstone.screenshot_url,
-  student_id: capstone.student.id
 }

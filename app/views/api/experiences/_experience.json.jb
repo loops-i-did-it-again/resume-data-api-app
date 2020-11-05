@@ -5,5 +5,4 @@
   job_title: experience.job_title,
   company_name: experience.company_name,
   details: experience.details,
-  student_id: experience.student_id
 }

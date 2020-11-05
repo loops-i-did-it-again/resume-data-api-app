@@ -1,0 +1,5 @@
+{
+  id: skill.id,
+  name: skill.name,
+  student: skill.student
+}

@@ -1,4 +1,6 @@
 class Api::EducationsController < ApplicationController
+  before_action :authenticate_student, except: [:index, :show]
+  
   def index
     @educations = Education.all
     render "index.json.jb"
@@ -14,7 +16,7 @@ class Api::EducationsController < ApplicationController
       degree: params[:degree],
       details: params[:details],
       university: params[:university],
-      student_id: params[:student_id], #needs to be changed for student logged in
+      student_id: current_student.id
     )
     if @education.save
       render "show.json.jb"

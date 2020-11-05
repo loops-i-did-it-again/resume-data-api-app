@@ -3,7 +3,7 @@ class Api::ExperiencesController < ApplicationController
   # before_action :authenticate_student
 
   def index
-    @experiences = current_student.experiences
+    @experiences = Experience.all # needs to be changed to current_student.experiences
     render "index.json.jb"
   end
 

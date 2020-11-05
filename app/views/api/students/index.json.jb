@@ -1,3 +1,16 @@
 @students.map do |student|
-  render partial: "student.json.jb", locals: { student: student }
+  student_hash = render partial: "student.json.jb", locals: { student: student }
+  student_hash[:experiences] = student.experiences.map do |experience|
+    render partial: "api/experiences/experience.json.jb", locals: {experience: experience}
+  end
+  student_hash[:educations] = student.educations.map do |education|
+    render partial: "api/educations/education.json.jb", locals: {education: education}
+  end
+  student_hash[:skills] = student.skills.map do |skill|
+    render partial: "api/skills/skill.json.jb", locals: {skill: skill}
+  end
+  student_hash[:capstones] = student.capstones.map do |capstone|
+    render partial: "api/capstones/capstone.json.jb", locals: {capstone: capstone}
+  end
+  student_hash
 end
